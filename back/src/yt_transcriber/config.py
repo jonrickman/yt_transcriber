@@ -17,10 +17,10 @@ yt_dl_opts = {
 			}
 		}
 
-MONGO_USER = "mongo"
+MONGO_USER = "admin"
 MONGO_PASSWORD = "pass"
 MONGO_PORT = 27017
-MONGO_URL = f"localhost"
-MONGO_DB = "2"
+MONGO_URL = "localhost"
+MONGO_DB = "yt"
 
 MONGODB_URL=f"mongodb://{MONGO_USER}:{MONGO_PASSWORD}@{MONGO_URL}/{MONGO_DB}?retryWrites=true&w=majority"
