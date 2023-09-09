@@ -1,8 +1,8 @@
-import pytest_asyncio
 import asyncio
 from httpx import AsyncClient
 from pytest import fixture
 from yt_transcriber import app, API_URL
+
 
 @fixture(scope="module")
 def event_loop():
@@ -13,7 +13,7 @@ def event_loop():
 
 @fixture
 def sample_youtube_api_key():
-    return {"fake_id":"64fb11bc6f584e990812fc78", "key": "some_fake_api_key"}
+    return {"_id": "c5743bf5-5c2f-48c4-b31f-3499dc8b9b3e", "key": "some_fake_api_key"}
 
 
 @fixture
@@ -21,9 +21,3 @@ async def client():
     async with AsyncClient(app=app, base_url=API_URL) as client:
         print("Client is ready")
         yield client
-
-
-# @fixture
-# async def async_app_client():
-#     async with AsyncClient(app=app, base_url='http://localhost:27017yt/api_keys') as client:
-#         yield client
