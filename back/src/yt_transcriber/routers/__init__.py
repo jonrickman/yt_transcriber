@@ -1,1 +1,2 @@
 from .youtube_api_keys import router as youtube_api_keys_router
+from .youtube_video_manifests import router as youtube_video_manifests_router
